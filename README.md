@@ -1,4 +1,4 @@
-# windfarm-simulation-ecb
+# offshore-windfarm_simulation
 
 A lean, transparent wind farm simulator showcasing:
 - **Tabular power curves** for real turbine models (MW→W converted).
