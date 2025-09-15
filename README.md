@@ -1,4 +1,4 @@
-# offshore-windfarm_simulation
+# windfarm-simulation-ecb
 
 A lean, transparent wind farm simulator:
 
@@ -29,7 +29,7 @@ pip install py_wake
 
 ## Structure
 ```
-offshore-windfarm_simulation
+windfarm-simulation-ecb
 ├── README.md
 ├── LICENSE
 ├── requirements.txt
