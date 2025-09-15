@@ -52,3 +52,18 @@ Implement or keep `my_interp` (KDTree-based) and ensure your turbine type keys m
 
 ## License
 MIT
+
+
+## Data & tools (Belgian offshore example)
+
+Build the canonical layout CSV from the curated dictionary:
+```bash
+python tools/build_layout_from_dict.py
+# writes data/derived/full_farm_layout.csv
+```
+
+Then run the real example (after setting NetCDF and production paths inside the file if needed):
+```bash
+python examples/example_real.py
+```
+
