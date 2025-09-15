@@ -37,6 +37,14 @@ def _power_from_tabular(ws: float, spec: Dict[str, Any]) -> float:
         pw_arr = np.asarray(pc["value"])
     return float(np.interp(ws, ws_arr, pw_arr))
 
+REQUIRED_REAL_COLS = {"Datetime"}  # plus park columns if you expect them
+
+def _validate_real_df(df: pd.DataFrame):
+    missing = REQUIRED_REAL_COLS - set(df.columns)
+    if missing:
+        raise ValueError(f"Real production CSV missing columns: {sorted(missing)}. "
+                         f"Got: {sorted(df.columns)}")
+
 def simulate_simple_power_curve(
     output_folder: str,
     real_production_file: Optional[str] = None,
