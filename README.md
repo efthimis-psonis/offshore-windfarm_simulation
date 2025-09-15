@@ -1,30 +1,35 @@
 # offshore-windfarm_simulation
 
-A lean, transparent wind farm simulator showcasing:
+A lean, transparent wind farm simulator:
+
 - **Tabular power curves** for real turbine models (MW→W converted).
-- **KDTree+UTM interpolation** from gridded NetCDF (LAT/LON) to turbine positions.
-- **Per‑turbine → farm aggregation** with clean metrics vs real production (optional).
+- **KDTree + UTM** interpolation from gridded NetCDF (LAT/LON) to turbine positions.
+- **Per-turbine → farm** aggregation with optional metrics vs real production.
 - **Deterministic & vectorized** pipeline, minimal dependencies.
 
-Why this matters for the ECB
+> **ECB relevance**
+>
+> - Links high-frequency wind output to the **energy component of HICP**.  
+> - Enables **scenario analysis** (calm/windy months) and **wholesale price pass-through** checks.  
+> - Building block for **climate risk / NGFS-style** scenarios.
 
-- Links high-frequency wind output to the energy component of HICP.
-
-- Enables scenario analysis (e.g., calm/windy months) and potential wholesale price pass-through.
-
-- Building block for climate risk / NGFS-style scenarios.
-
+---
 
 ## Install
+
 ```bash
 python -m venv .venv
-source .venv/bin/activate  # Windows: .venv\Scripts\Activate.ps1
+# Windows PowerShell: .venv\Scripts\Activate.ps1
+# macOS/Linux:
+source .venv/bin/activate
+
 pip install -r requirements.txt
+pip install py_wake
 ```
 
 ## Structure
 ```
-windfarm-simulation-ecb
+offshore-windfarm_simulation
 ├── README.md
 ├── LICENSE
 ├── requirements.txt
