@@ -6,7 +6,14 @@ A lean, transparent wind farm simulator showcasing:
 - **Per‑turbine → farm aggregation** with clean metrics vs real production (optional).
 - **Deterministic & vectorized** pipeline, minimal dependencies.
 
-> Built to serve as a portfolio artifact for an ECB traineeship application.
+Why this matters for the ECB
+
+- Links high-frequency wind output to the energy component of HICP.
+
+- Enables scenario analysis (e.g., calm/windy months) and potential wholesale price pass-through.
+
+- Building block for climate risk / NGFS-style scenarios.
+
 
 ## Install
 ```bash
